@@ -2,6 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import about_image from '../assets/Image 1.jpg';
 
 function Home() {
   return (
@@ -56,9 +57,9 @@ function Home() {
             </div>
 
             {/* Image */}
-            <div className="col-lg-6 text-center" data-aos="fade-left">
+            <div className="col-lg-6 text-center" data-aos="zoom-in" data-aos-delay="200">
               <img
-                src="src/assets/Image 1.jpg"
+                src={about_image}
                 alt="Sanjula Ilankoon"
                 className="img-fluid rounded-4 shadow-lg"
                 style={{
