@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import Navbar from '../components/Navbar';
+import image01 from '../assets/Image_landsape.png';
+import image02 from '../assets/Image_potrait.png';
 
 const categories = ['All', 'Wedding', 'Portraits', 'Frames', 'Function'];
 
 const images = [
-  { id: 1, url: '/gallery/wedding1.jpg', category: 'Wedding' },
-  { id: 2, url: '/gallery/portrait1.jpg', category: 'Portraits' },
-  { id: 3, url: '/gallery/wedding2.jpg', category: 'Wedding' },
-  { id: 4, url: '/gallery/frames1.jpg', category: 'Frames' },
-  { id: 5, url: '/gallery/function1.jpg', category: 'Function' },
-  { id: 6, url: '/gallery/portrait2.jpg', category: 'Portraits' },
+  { id: 1, url: 'image01', category: 'Wedding' },
+  { id: 2, url: 'image02', category: 'Portraits' },
+  { id: 3, url: 'image01', category: 'Wedding' },
+  { id: 4, url: 'image02', category: 'Frames' },
+  { id: 5, url: 'image02', category: 'Function' },
+  { id: 6, url: 'image01', category: 'Portraits' },
+  { id: 7, url: 'image02', category: 'Portraits' },
+  { id: 8, url: 'image01', category: 'Portraits' },
+  { id: 9, url: 'image01', category: 'Portraits' },
+
   // Add more images as needed
 ];
 
@@ -69,7 +75,7 @@ const Gallery = () => {
             {filteredImages.map((img) => (
               <div key={img.id} className="gallery-img-wrapper">
                 <img
-                  src={img.url}
+                  src={img.url === 'image01' ? image01 : image02}
                   alt={img.category}
                   className="img-fluid rounded shadow-sm"
                 />

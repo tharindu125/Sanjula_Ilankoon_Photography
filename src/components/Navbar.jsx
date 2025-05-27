@@ -22,7 +22,7 @@ function CustomNavbar() {
             <Nav.Link as={Link} to="/" className={getNavLinkClass('/')}>Home</Nav.Link>
             <Nav.Link as={Link} to="/portfolio" className={getNavLinkClass('/portfolio')}>Gallery</Nav.Link>
             <Nav.Link as={Link} to="/bookings" className={getNavLinkClass('/bookings')}>Bookings</Nav.Link>
-            <Nav.Link as={Link} to="/about" className={getNavLinkClass('/about')}>About Us</Nav.Link>
+            <Nav.Link as={Link} to="/#about" className={getNavLinkClass('/about')}>About Us</Nav.Link>
 
             <Nav.Item className="ms-3">
               <Link to="/portfolio" className="btn btn-outline-primary fw-semibold">
