@@ -28,7 +28,7 @@ function Footer() {
           </Col>
 
           {/* Contact Info */}
-          <Col md={3} className="mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <Col md={3} className="mb-4 footer-contact_info" data-aos="zoom-in" data-aos-delay="200">
             <h5 className="fw-bold">Contact</h5>
             <ul className="list-unstyled small">
               <li className="d-flex align-items-center mb-2">
