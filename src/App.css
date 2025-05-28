@@ -93,12 +93,13 @@
 }
 
 .hero-title {
+  position: absolute !important;
   font-size: 3.5rem;
-  margin-top: 5rem !important;
-  margin-right: -2rem !important;
+  margin-right: 7rem !important;
 }
 
 .hero_subtitle-2 {
+  position: absolute !important;
   margin-bottom: 2rem !important;
 }
 
@@ -130,12 +131,14 @@
   }
 
   .hero-title {
+    position: relative !important;
     font-size: 3rem !important;
     margin-top: 10rem !important;
-    margin-right: -3rem !important;
+    margin-left: 2rem !important;
   }
 
   .hero_subtitle-2 {
+    position: relative !important;
     margin-bottom: 8.5rem !important;
     left:35px;
     color: #3f3f3f;
@@ -210,4 +213,31 @@
 }
 .gallery-img-wrapper img:hover {
   transform: scale(1.03);
+}
+
+/* footer */
+.text-gradient {
+  background: linear-gradient(45deg, #0dcaf0, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.facebook:hover {
+ color: #3b5998 !important;
+ transition: color 0.3s ease;
+}
+
+.instagram:hover {
+  color: rgb(255, 0, 183) !important;
+  transition: color 0.3s ease;
+}
+
+.twitter:hover {
+  color: #1da1f2 !important;
+  transition: color 0.3s ease;
+}
+
+.whatsapp:hover {
+  color: #25d366 !important;
+  transition: color 0.3s ease;
 }

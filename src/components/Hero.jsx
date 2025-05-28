@@ -44,13 +44,13 @@ function Hero() {
             </Col>
 
             <Col md={6} className="test-md-end" >
-              <h1 className="position-absolute top-50 end-0 translate-middle fw-bold ms-5 hero-title"  data-aos="fade-up" data-aos-delay="200">
+              <h1 className="top-50 end-0 fw-bold hero-title"  data-aos="zoom-out" data-aos-delay="200">
                 Sanjula<br />Ilankoon<br />Photography
               </h1>
 
               {/* <hr className="position-absolute bottom-0 start-0 translate-middle-x w-25 border-1 border-dark fade-in-load delay-1 botom_line" /> */}
 
-              <div className="d-md-flex position-absolute bottom-0 end-0 me-4 fs-5 fade-in-load delay-1 hero_subtitle-2">
+              <div className="d-md-flex bottom-0 end-0 me-4 fs-5 fade-in-load delay-1 hero_subtitle-2">
                 <p className="text-muted mb-0">Elegant memories for life</p>
               </div>
             </Col>

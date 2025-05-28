@@ -21,7 +21,7 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Wedding');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredImages =
     selectedCategory === 'All'
@@ -56,6 +56,7 @@ const Gallery = () => {
                 className={`filter-btn ${
                   selectedCategory === category ? 'active' : ''
                 }`}
+                data-aos="zoom-in" data-aos-delay="200"
               >
                 {category}
               </button>
@@ -63,7 +64,7 @@ const Gallery = () => {
           </div>
 
           {/* Heading */}
-          <h3 className="text-left fw-bold">{selectedCategory}</h3>
+          <h3 className="text-left fw-bold" data-aos="zoom-out" data-aos-delay="200">{selectedCategory}</h3>
           <hr className='mb-4 mt-0 w-25 border-2 border-dark fade-in-load delay-1' />
 
           {/* Masonry Grid */}
@@ -77,7 +78,8 @@ const Gallery = () => {
                 <img
                   src={img.url === 'image01' ? image01 : image02}
                   alt={img.category}
-                  className="img-fluid rounded shadow-sm"
+                  className="img-fluid rounded shadow-lg"
+                  data-aos="fade-up" data-aos-delay="200"
                 />
               </div>
             ))}
