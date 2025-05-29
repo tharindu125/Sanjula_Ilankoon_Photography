@@ -6,20 +6,17 @@ import 'aos/dist/aos.css';
 function Hero() {
   return (
     <>
-      <section className="bg-light py-5 mt-5 min-vh-100 d-flex align-items-center">
+      <section className="hero-section bg-light py-5 mt-5 min-vh-100 d-flex align-items-center">
+
+        {/* <div className='col-md-12 position-absolute d-flex justify-content-center align-items-center' >
+          <div className="position-absolute rounded-circle bg-secondary bottom-0 mt-5 mx-auto overflow-hidden hero_background_image" ></div>
+          <div className='position-absolute hero_background_image' >
+            <img src="src/assets/Image 2.png" alt="Photographer" className="object-fit-cover" />
+          </div>
+        </div> */}
+        
         <Container>
           <Row className="align-items-center gy-4">
-            {/* Background image */}
-            <Col md={12} className="position-absolute d-flex justify-content-center align-items-center">
-              {/* <div className="position-absolute rounded-circle bg-secondary bottom-0 mt-5 mx-auto overflow-hidden hero_background_image" ></div>
-              <div className='position-absolute hero_background_image' >
-                <img src="src/assets/Image 2.png" alt="Photographer" className="object-fit-cover" />
-              </div> */}
-              {/* <div className='position-absolute hero_background_image' >
-                <img src="src/assets/Image 2.png" alt="Photographer" className="object-fit-cover overflow-hidden" />
-              </div> */}
-            </Col>
-
             {/* Left text content */}
             <Col md={6} className="text-center text-md-start">
               <p className="d-md-flex gap-3 position-absolute top-0 ms-4 hero_subtitle-1" data-aos="fade-right" data-aos-delay="200">

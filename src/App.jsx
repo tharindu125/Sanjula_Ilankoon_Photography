@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Booking from './pages/Booking';
 import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons'
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/bookings" element={<Booking />} />
       </Routes>  
+      <FloatingButtons />
       <Footer />
     </>
   )
