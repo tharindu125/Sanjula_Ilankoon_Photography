@@ -3,28 +3,24 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import 'aos/dist/aos.css';
-import 'animate.css';
 
 function Hero() {
   const [showHero, setShowHero] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    const scrollTop = window.scrollY;
 
-    if (currentScrollY > lastScrollY && currentScrollY > 0) {
-      setShowHero(false); // scrolling down
-    } else {
-      setShowHero(true); // scrolling up
+    if (scrollTop === 0) {
+      setShowHero(true); // only show at the top
+    } else if (scrollTop > 0) {
+      setShowHero(false); // hide on scroll down
     }
-
-    setLastScrollY(currentScrollY);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <section
