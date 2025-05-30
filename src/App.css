@@ -190,7 +190,7 @@
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 70px;
-    box-shadow: 0 2px 5px black;
+    box-shadow: 2px 2px 3px black;
   }
 
   .hero-title {
