@@ -1,21 +1,38 @@
+import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import 'aos/dist/aos.css';
+import 'animate.css';
 
 function Hero() {
-  return (
-    <>
-      <section className="hero-section bg-light py-0 min-vh-100 d-flex align-items-center">
+  const [showHero, setShowHero] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-        {/* <div className='col-md-12 position-absolute d-flex justify-content-center align-items-center' >
-          <div className="position-absolute rounded-circle bg-secondary bottom-0 mt-5 mx-auto overflow-hidden hero_background_image" ></div>
-          <div className='position-absolute hero_background_image' >
-            <img src="src/assets/Image 2.png" alt="Photographer" className="object-fit-cover" />
-          </div>
-        </div> */}
-        
-        <Container>
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 0) {
+      setShowHero(false); // scrolling down
+    } else {
+      setShowHero(true); // scrolling up
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  return (
+    <section
+      className={`hero-section bg-light py-0 min-vh-100 d-flex align-items-center transition-hero ${
+        showHero ? 'slide-in-left' : 'slide-out-right'
+      }`}
+    >
+      <Container>
           <Row className="align-items-center gy-4">
             {/* Left text content */}
             <Col md={6} className="text-center text-md-start">
@@ -53,8 +70,7 @@ function Hero() {
             </Col>
           </Row>
         </Container>
-      </section>
-    </>
+    </section>
   );
 }
 

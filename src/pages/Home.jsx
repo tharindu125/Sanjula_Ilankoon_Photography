@@ -10,7 +10,7 @@ function Home() {
       <Navbar />
       <Hero />
       {/* About Section */}
-      <section className="py-5" id="about" style={{ backgroundColor: '#e9ecef' }}>
+      <section className="py-5" id="about" style={{ backgroundColor: '#e9ecef', marginTop: '10rem' }}>
         <div className="container">
           <div className="row align-items-center gy-4">
             {/* Text Content */}

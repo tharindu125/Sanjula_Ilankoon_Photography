@@ -7,6 +7,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter } from 'react-router-dom';
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import 'animate.css/animate.min.css';
+
 
 AOS.init({
   duration: 1000, // animation duration
