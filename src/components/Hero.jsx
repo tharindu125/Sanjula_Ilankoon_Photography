@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 function Hero() {
   return (
     <>
-      <section className="hero-section bg-light py-5 mt-5 min-vh-100 d-flex align-items-center">
+      <section className="hero-section bg-light py-0 min-vh-100 d-flex align-items-center">
 
         {/* <div className='col-md-12 position-absolute d-flex justify-content-center align-items-center' >
           <div className="position-absolute rounded-circle bg-secondary bottom-0 mt-5 mx-auto overflow-hidden hero_background_image" ></div>

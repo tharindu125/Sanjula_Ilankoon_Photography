@@ -151,8 +151,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url('/src/assets/hero_1.jpg');
   background-size: cover;
   background-position: center;
@@ -212,39 +212,39 @@
   }
 
   .hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/src/assets/hero_2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 
-  /* Animation */
-  animation-name: header-zoom;
-  animation-duration: 10s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transition: 1s;
-}
+    /* Animation */
+    animation-name: header-zoom;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 1s;
+  }
 
-/* Animate scaling */
-@keyframes header-zoom {
-  0%, 100% {
-    transform: scale(1);
+  /* Animate scaling */
+  @keyframes header-zoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25%, 75% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
   }
-  25%, 75% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
 }
 
 
