@@ -81,7 +81,7 @@
 .hero-button {
   display: inline-block;
   font-size: 1.2em !important;
-  background-color: hsla(213, 57%, 67%, 0.811) !important;
+  background-color: hsla(213, 57%, 67%, 0.9) !important;
   border-radius: 8px;
   border: none !important;
   box-shadow: 0 2px 5px black;
