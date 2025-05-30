@@ -66,7 +66,7 @@ const FloatingButtons = () => {
             width="50"
             height="50"
             loading="lazy"
-            style={{ borderRadius: '50%', boxShadow: '0 0 10px rgba(0,0,0,0.3)' }}
+            // style={{ borderRadius: '50%', boxShadow: '0 0 10px rgba(0,0,0,0.3)' }}
           />
         </a>
       </div>
