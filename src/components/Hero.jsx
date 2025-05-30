@@ -47,7 +47,7 @@ function Hero() {
                 </div>
 
                 {/* Photo Gallery Button */}
-                <Button as={Link} to="/gallery" className="fw-bold text-dark hero-button fade-in-load delay-2">
+                <Button as={Link} to="/gallery" className="fw-bold text-dark hero-button fade-in-load delay-2 ">
                   Photo Gallery
                 </Button>
               </div>
@@ -57,8 +57,6 @@ function Hero() {
               <h1 className="top-50 end-0 fw-bold hero-title"  data-aos="zoom-out" data-aos-delay="200">
                 Sanjula<br />Ilankoon<br />Photography
               </h1>
-
-              {/* <hr className="position-absolute bottom-0 start-0 translate-middle-x w-25 border-1 border-dark fade-in-load delay-1 botom_line" /> */}
 
               <div className="d-md-flex bottom-0 end-0 me-4 fs-5 fade-in-load delay-1 hero_subtitle-2">
                 <p className="text-muted mb-0">Elegant memories for life</p>

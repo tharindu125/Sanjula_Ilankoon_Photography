@@ -81,9 +81,10 @@
 .hero-button {
   display: inline-block;
   font-size: 1.2em !important;
-  background-color: #7ba7db !important;
+  background-color: hsla(213, 57%, 67%, 0.811) !important;
   border-radius: 8px;
   border: none !important;
+  box-shadow: 0 2px 5px black;
 }
 
 .hero_subtitle-1 {
@@ -189,7 +190,7 @@
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 70px;
-    box-shadow: 0 0 8px black;
+    box-shadow: 0 2px 5px black;
   }
 
   .hero-title {
