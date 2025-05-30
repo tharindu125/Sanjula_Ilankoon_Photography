@@ -188,6 +188,8 @@
   .hero-button {
     display: inline-block;
     margin-left: 10px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 8px black;
   }
 
   .hero-title {
