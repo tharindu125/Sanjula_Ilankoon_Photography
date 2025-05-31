@@ -9,7 +9,7 @@ import image02 from '../assets/Image_potrait.png';
 
 const categories = ['All', 'Wedding', 'Portraits', 'Frames', 'Function'];
 
-const images = [ 
+const images = [
   { id: 1, url: image01, category: 'Wedding' },
   { id: 2, url: image02, category: 'Portraits' },
   { id: 3, url: image01, category: 'Wedding' },
