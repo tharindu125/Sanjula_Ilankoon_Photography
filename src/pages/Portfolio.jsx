@@ -30,9 +30,11 @@ const Gallery = () => {
 
   const breakpointColumnsObj = {
     default: 4,
-    1100: 3,
-    700: 2,
-    500: 1,
+    1100: 4,
+    700: 3,
+    500: 3,
+    400: 2,
+    300: 1 
   };
 
   return (
@@ -40,13 +42,7 @@ const Gallery = () => {
       <Navbar />
       <section className="gallery-section bg-white">
         <div className="container">
-          {/* Hero Section */}
-          {/* <div className="text-center my-5">
-            <h1 className="fw-bold display-4 fs-3">Photo Gallery</h1>
-            <p className="lead text-muted">
-              Explore our stunning collection of photography that captures the essence of every moment.
-            </p>
-          </div> */}
+
           {/* Filter Menu */}
           <div className="d-flex justify-content-center gap-3 flex-wrap mb-4">
             {categories.map((category) => (

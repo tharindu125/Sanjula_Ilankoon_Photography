@@ -26,17 +26,19 @@ const images = [
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
-    const filteredImages =
-      selectedCategory === 'All'
-        ? images
-        : images.filter((img) => img.category === selectedCategory);
-  
-    const breakpointColumnsObj = {
-      default: 4,
-      1100: 3,
-      700: 2,
-      500: 1,
-    };
+  const filteredImages =
+    selectedCategory === 'All'
+      ? images
+      : images.filter((img) => img.category === selectedCategory);
+
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 4,
+    700: 3,
+    500: 3,
+    400: 2,
+    300: 1 
+  };
 
   return (
     <>
