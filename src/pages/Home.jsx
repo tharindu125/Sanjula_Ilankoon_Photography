@@ -10,21 +10,22 @@ import image02 from '../assets/Image_potrait.png';
 const categories = ['All', 'Wedding', 'Portraits', 'Frames', 'Function'];
 
 const images = [
-  { id: 1, url: 'image01', category: 'Wedding' },
-  { id: 2, url: 'image02', category: 'Portraits' },
-  { id: 3, url: 'image01', category: 'Wedding' },
-  { id: 4, url: 'image02', category: 'Frames' },
-  { id: 5, url: 'image02', category: 'Function' },
-  { id: 6, url: 'image01', category: 'Portraits' },
-  { id: 7, url: 'image02', category: 'Portraits' },
-  { id: 8, url: 'image01', category: 'Portraits' },
-  { id: 9, url: 'image01', category: 'Portraits' },
+  { id: 1, url: image01, category: 'Wedding' },
+  { id: 2, url: image02, category: 'Portraits' },
+  { id: 3, url: image01, category: 'Wedding' },
+  { id: 4, url: image02, category: 'Frames' },
+  { id: 5, url: image02, category: 'Function' },
+  { id: 6, url: image01, category: 'Portraits' },
+  { id: 7, url: image02, category: 'Portraits' },
+  { id: 8, url: image01, category: 'Portraits' },
+  { id: 9, url: image01, category: 'Portraits' },
 
   // Add more images as needed
 ];
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [modalImage, setModalImage] = useState(null);
   
   const filteredImages =
     selectedCategory === 'All'
@@ -37,7 +38,7 @@ function Home() {
     700: 3,
     500: 3,
     400: 2,
-    300: 1 
+    300: 1,
   };
 
   return (
@@ -164,13 +165,7 @@ function Home() {
       {/* Gallery */}
       <section className="gallery-section bg-white">
         <div className="container">
-          {/* Hero Section */}
-          {/* <div className="text-center my-5">
-            <h1 className="fw-bold display-4 fs-3">Photo Gallery</h1>
-            <p className="lead text-muted">
-              Explore our stunning collection of photography that captures the essence of every moment.
-            </p>
-          </div> */}
+
           {/* Filter Menu */}
           <div className="d-flex justify-content-center gap-3 flex-wrap mb-4">
             {categories.map((category) => (
@@ -198,9 +193,14 @@ function Home() {
             columnClassName="my-masonry-grid_column"
           >
             {filteredImages.map((img) => (
-              <div key={img.id} className="gallery-img-wrapper">
+              <div
+                key={img.id}
+                className="gallery-img-wrapper"
+                onClick={() => setModalImage(img.url)}
+                style={{ cursor: 'pointer' }}
+              >
                 <img
-                  src={img.url === 'image01' ? image01 : image02}
+                  src={img.url}
                   alt={img.category}
                   className="img-fluid rounded shadow-lg"
                   data-aos="fade-up" data-aos-delay="200"
@@ -210,6 +210,16 @@ function Home() {
           </Masonry>
         </div>
       </section>
+
+      {/* Modal */}
+      {modalImage && (
+        <div className="modal-overlay" onClick={() => setModalImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="Full view" className="modal-img" />
+            <button className="modal-close" onClick={() => setModalImage(null)}>X</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
